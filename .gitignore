@@ -1,0 +1,21 @@
+target/
+reports/
+test-data/generated/
+*.class
+.idea/
+*.iml
+.vscode/
+.DS_Store
+qa.properties
+.env
+
+# Credentials — never commit
+.gemini_env
+
+# Video: keep the small source (scripts, scenes/brand/script, evidence-card images),
+# exclude heavy/generated artifacts (rendered MP4s, voiceover audio, snapshots, generated index.html)
+qa-video/**/*.mp4
+qa-video/**/*.wav
+qa-video/**/snapshots/
+qa-video/QAVID/index.html
+node_modules/

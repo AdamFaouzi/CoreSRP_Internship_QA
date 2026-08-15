@@ -1,0 +1,8 @@
+Core Invoice is an invoice-automation platform, and I put it through a full adversarial QA and security assessment.
+The test suite is built entirely in Java, with Playwright, Selenium, and JMeter driving the browser, the API, and the load scenarios.
+Across seventy-six automated tests, it surfaced eight distinct findings, three of them security-relevant.
+The first is a formula-injection flaw: a vendor name starting with an equals sign is exported to CSV completely unescaped, so opening that file in Excel runs it as a live command.
+The second is account enumeration. The password-reset endpoint answers differently for real and unknown emails, quietly leaking who has an account.
+The third corrupts the ledger: a negative invoice total is accepted and flows straight into the accounting journal as an invalid debit.
+But not everything cracked. Cross-tenant isolation, session-token forgery, and the quota counter all held firm under pressure.
+Seventy-six tests, eight findings, and one clear picture of exactly where this platform stands.

@@ -1,0 +1,84 @@
+{
+  "title": "Core Invoice — QA & Security Assessment (60s)",
+  "fade": 0.5,
+  "tail": 3.2,
+  "lead": 0.15,
+  "scenes": [
+    {
+      "id": "s01",
+      "kind": "brand",
+      "anchor": null,
+      "floor": 0
+    },
+    {
+      "id": "s02",
+      "kind": "line",
+      "anchor": "java",
+      "floor": 8,
+      "text": "Java · Playwright · Selenium · JMeter"
+    },
+    {
+      "id": "s03",
+      "kind": "stats",
+      "anchor": "surfaced",
+      "floor": 16,
+      "stats": [
+        [
+          "76",
+          "Automated tests"
+        ],
+        [
+          "8",
+          "Findings"
+        ],
+        [
+          "3",
+          "Security-relevant"
+        ]
+      ]
+    },
+    {
+      "id": "s04",
+      "kind": "cards",
+      "anchor": "injection",
+      "floor": 22,
+      "images": [
+        "f1_csv"
+      ]
+    },
+    {
+      "id": "s05",
+      "kind": "cards",
+      "anchor": "enumeration",
+      "floor": 33,
+      "images": [
+        "f2_enum"
+      ]
+    },
+    {
+      "id": "s06",
+      "kind": "cards",
+      "anchor": "ledger",
+      "floor": 42,
+      "images": [
+        "f4_accounting"
+      ]
+    },
+    {
+      "id": "s07",
+      "kind": "cards",
+      "anchor": "cracked",
+      "floor": 50,
+      "images": [
+        "f5_solid"
+      ]
+    },
+    {
+      "id": "s08",
+      "kind": "line",
+      "anchor": "picture",
+      "floor": 60,
+      "text": "76 tests · 8 findings"
+    }
+  ]
+}

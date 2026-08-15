@@ -1,0 +1,832 @@
+[
+  {
+    "text": "Core",
+    "start": 0.32,
+    "end": 0.33
+  },
+  {
+    "text": "Invoice",
+    "start": 0.35,
+    "end": 0.9
+  },
+  {
+    "text": "is",
+    "start": 0.9,
+    "end": 1.07
+  },
+  {
+    "text": "an",
+    "start": 1.07,
+    "end": 1.23
+  },
+  {
+    "text": "invoice",
+    "start": 1.23,
+    "end": 1.81
+  },
+  {
+    "text": "automation",
+    "start": 1.81,
+    "end": 2.63
+  },
+  {
+    "text": "platform,",
+    "start": 2.63,
+    "end": 3.44
+  },
+  {
+    "text": "and",
+    "start": 3.57,
+    "end": 3.72
+  },
+  {
+    "text": "I",
+    "start": 3.72,
+    "end": 3.76
+  },
+  {
+    "text": "put",
+    "start": 3.76,
+    "end": 3.88
+  },
+  {
+    "text": "it",
+    "start": 3.88,
+    "end": 3.98
+  },
+  {
+    "text": "through",
+    "start": 3.98,
+    "end": 4.24
+  },
+  {
+    "text": "a",
+    "start": 4.24,
+    "end": 4.44
+  },
+  {
+    "text": "full",
+    "start": 4.44,
+    "end": 4.56
+  },
+  {
+    "text": "Adversarial",
+    "start": 4.56,
+    "end": 5.36
+  },
+  {
+    "text": "QA",
+    "start": 5.36,
+    "end": 5.84
+  },
+  {
+    "text": "and",
+    "start": 5.84,
+    "end": 6.2
+  },
+  {
+    "text": "security",
+    "start": 6.2,
+    "end": 6.62
+  },
+  {
+    "text": "assessment.",
+    "start": 6.62,
+    "end": 7.23
+  },
+  {
+    "text": "The",
+    "start": 7.23,
+    "end": 7.86
+  },
+  {
+    "text": "test",
+    "start": 7.86,
+    "end": 8.12
+  },
+  {
+    "text": "suite",
+    "start": 8.12,
+    "end": 8.55
+  },
+  {
+    "text": "is",
+    "start": 8.55,
+    "end": 8.68
+  },
+  {
+    "text": "built",
+    "start": 8.74,
+    "end": 9.15
+  },
+  {
+    "text": "entirely",
+    "start": 9.15,
+    "end": 9.84
+  },
+  {
+    "text": "in",
+    "start": 9.84,
+    "end": 10.01
+  },
+  {
+    "text": "Java,",
+    "start": 10.01,
+    "end": 10.48
+  },
+  {
+    "text": "with",
+    "start": 10.61,
+    "end": 10.67
+  },
+  {
+    "text": "Playwright,",
+    "start": 10.67,
+    "end": 11.24
+  },
+  {
+    "text": "Selenium,",
+    "start": 11.24,
+    "end": 12
+  },
+  {
+    "text": "and",
+    "start": 12,
+    "end": 12.2
+  },
+  {
+    "text": "Jmeter",
+    "start": 12.28,
+    "end": 12.72
+  },
+  {
+    "text": "driving",
+    "start": 12.72,
+    "end": 13.03
+  },
+  {
+    "text": "the",
+    "start": 13.08,
+    "end": 13.19
+  },
+  {
+    "text": "browser,",
+    "start": 13.19,
+    "end": 13.64
+  },
+  {
+    "text": "the",
+    "start": 13.64,
+    "end": 14.02
+  },
+  {
+    "text": "API,",
+    "start": 14.02,
+    "end": 14.66
+  },
+  {
+    "text": "and",
+    "start": 14.66,
+    "end": 14.67
+  },
+  {
+    "text": "the",
+    "start": 14.72,
+    "end": 15.07
+  },
+  {
+    "text": "load",
+    "start": 15.31,
+    "end": 15.32
+  },
+  {
+    "text": "scenarios.",
+    "start": 15.44,
+    "end": 16.2
+  },
+  {
+    "text": "Across",
+    "start": 16.52,
+    "end": 16.63
+  },
+  {
+    "text": "76",
+    "start": 16.63,
+    "end": 17.06
+  },
+  {
+    "text": "automated",
+    "start": 17.06,
+    "end": 17.71
+  },
+  {
+    "text": "tests,",
+    "start": 17.71,
+    "end": 18.21
+  },
+  {
+    "text": "it",
+    "start": 18.21,
+    "end": 18.32
+  },
+  {
+    "text": "surfaced",
+    "start": 18.34,
+    "end": 18.93
+  },
+  {
+    "text": "eight",
+    "start": 18.93,
+    "end": 19.16
+  },
+  {
+    "text": "distinct",
+    "start": 19.29,
+    "end": 19.87
+  },
+  {
+    "text": "findings,",
+    "start": 19.87,
+    "end": 20.59
+  },
+  {
+    "text": "three",
+    "start": 20.64,
+    "end": 20.88
+  },
+  {
+    "text": "of",
+    "start": 20.96,
+    "end": 21.09
+  },
+  {
+    "text": "them",
+    "start": 21.09,
+    "end": 21.38
+  },
+  {
+    "text": "security",
+    "start": 21.38,
+    "end": 21.96
+  },
+  {
+    "text": "relevant.",
+    "start": 21.96,
+    "end": 22.8
+  },
+  {
+    "text": "The",
+    "start": 22.8,
+    "end": 23.14
+  },
+  {
+    "text": "first",
+    "start": 23.14,
+    "end": 23.39
+  },
+  {
+    "text": "is",
+    "start": 23.39,
+    "end": 23.54
+  },
+  {
+    "text": "a",
+    "start": 23.54,
+    "end": 23.61
+  },
+  {
+    "text": "formula",
+    "start": 23.61,
+    "end": 24.13
+  },
+  {
+    "text": "injection",
+    "start": 24.13,
+    "end": 24.8
+  },
+  {
+    "text": "flaw.",
+    "start": 24.8,
+    "end": 25.32
+  },
+  {
+    "text": "A",
+    "start": 25.32,
+    "end": 25.39
+  },
+  {
+    "text": "vendor",
+    "start": 25.39,
+    "end": 25.76
+  },
+  {
+    "text": "name",
+    "start": 25.89,
+    "end": 26.06
+  },
+  {
+    "text": "starting",
+    "start": 26.37,
+    "end": 26.72
+  },
+  {
+    "text": "with",
+    "start": 26.72,
+    "end": 27.02
+  },
+  {
+    "text": "an",
+    "start": 27.02,
+    "end": 27.04
+  },
+  {
+    "text": "equal",
+    "start": 27.24,
+    "end": 27.48
+  },
+  {
+    "text": "sign",
+    "start": 27.56,
+    "end": 27.84
+  },
+  {
+    "text": "is",
+    "start": 27.86,
+    "end": 27.99
+  },
+  {
+    "text": "exported",
+    "start": 27.99,
+    "end": 28.58
+  },
+  {
+    "text": "to",
+    "start": 28.58,
+    "end": 28.73
+  },
+  {
+    "text": "CSV",
+    "start": 28.73,
+    "end": 28.94
+  },
+  {
+    "text": "completely",
+    "start": 28.96,
+    "end": 29.68
+  },
+  {
+    "text": "unescaped,",
+    "start": 29.68,
+    "end": 30.6
+  },
+  {
+    "text": "so",
+    "start": 30.72,
+    "end": 30.75
+  },
+  {
+    "text": "opening",
+    "start": 30.75,
+    "end": 31.28
+  },
+  {
+    "text": "that",
+    "start": 31.28,
+    "end": 31.49
+  },
+  {
+    "text": "file",
+    "start": 31.59,
+    "end": 31.88
+  },
+  {
+    "text": "in",
+    "start": 31.88,
+    "end": 32
+  },
+  {
+    "text": "Excel",
+    "start": 32.11,
+    "end": 32.41
+  },
+  {
+    "text": "runs",
+    "start": 32.41,
+    "end": 32.71
+  },
+  {
+    "text": "it",
+    "start": 32.71,
+    "end": 32.86
+  },
+  {
+    "text": "as",
+    "start": 32.86,
+    "end": 32.99
+  },
+  {
+    "text": "a",
+    "start": 33.01,
+    "end": 33.04
+  },
+  {
+    "text": "live",
+    "start": 33.27,
+    "end": 33.38
+  },
+  {
+    "text": "command.",
+    "start": 33.52,
+    "end": 34.2
+  },
+  {
+    "text": "The",
+    "start": 34.2,
+    "end": 34.54
+  },
+  {
+    "text": "second",
+    "start": 34.54,
+    "end": 34.85
+  },
+  {
+    "text": "is",
+    "start": 34.93,
+    "end": 35.02
+  },
+  {
+    "text": "account",
+    "start": 35.02,
+    "end": 35.54
+  },
+  {
+    "text": "enumeration.",
+    "start": 35.54,
+    "end": 36.6
+  },
+  {
+    "text": "The",
+    "start": 36.6,
+    "end": 36.77
+  },
+  {
+    "text": "password",
+    "start": 36.77,
+    "end": 37.16
+  },
+  {
+    "text": "reset",
+    "start": 37.27,
+    "end": 37.48
+  },
+  {
+    "text": "endpoint",
+    "start": 37.77,
+    "end": 38.09
+  },
+  {
+    "text": "answers",
+    "start": 38.09,
+    "end": 38.44
+  },
+  {
+    "text": "differently",
+    "start": 38.64,
+    "end": 39.2
+  },
+  {
+    "text": "for",
+    "start": 39.2,
+    "end": 39.38
+  },
+  {
+    "text": "real",
+    "start": 39.38,
+    "end": 39.63
+  },
+  {
+    "text": "and",
+    "start": 39.63,
+    "end": 39.8
+  },
+  {
+    "text": "unknown",
+    "start": 39.81,
+    "end": 40.23
+  },
+  {
+    "text": "emails,",
+    "start": 40.25,
+    "end": 40.8
+  },
+  {
+    "text": "quietly",
+    "start": 40.8,
+    "end": 41.24
+  },
+  {
+    "text": "leaking",
+    "start": 41.33,
+    "end": 41.36
+  },
+  {
+    "text": "who",
+    "start": 41.36,
+    "end": 42.12
+  },
+  {
+    "text": "has",
+    "start": 42.12,
+    "end": 42.34
+  },
+  {
+    "text": "an",
+    "start": 42.34,
+    "end": 42.39
+  },
+  {
+    "text": "account.",
+    "start": 42.51,
+    "end": 43.3
+  },
+  {
+    "text": "The",
+    "start": 43.3,
+    "end": 43.64
+  },
+  {
+    "text": "third",
+    "start": 43.64,
+    "end": 43.86
+  },
+  {
+    "text": "corrupts",
+    "start": 43.86,
+    "end": 44.42
+  },
+  {
+    "text": "the",
+    "start": 44.42,
+    "end": 44.63
+  },
+  {
+    "text": "ledger.",
+    "start": 44.63,
+    "end": 45.3
+  },
+  {
+    "text": "A",
+    "start": 45.3,
+    "end": 45.36
+  },
+  {
+    "text": "negative",
+    "start": 45.36,
+    "end": 45.87
+  },
+  {
+    "text": "invoice",
+    "start": 45.87,
+    "end": 46.26
+  },
+  {
+    "text": "total",
+    "start": 46.39,
+    "end": 46.56
+  },
+  {
+    "text": "is",
+    "start": 46.56,
+    "end": 46.87
+  },
+  {
+    "text": "accepted",
+    "start": 46.87,
+    "end": 47.3
+  },
+  {
+    "text": "and",
+    "start": 47.3,
+    "end": 47.49
+  },
+  {
+    "text": "flows",
+    "start": 47.49,
+    "end": 47.81
+  },
+  {
+    "text": "straight",
+    "start": 47.81,
+    "end": 48.31
+  },
+  {
+    "text": "into",
+    "start": 48.36,
+    "end": 48.59
+  },
+  {
+    "text": "the",
+    "start": 48.59,
+    "end": 48.73
+  },
+  {
+    "text": "accounting",
+    "start": 48.81,
+    "end": 49.43
+  },
+  {
+    "text": "journal",
+    "start": 49.43,
+    "end": 49.88
+  },
+  {
+    "text": "as",
+    "start": 49.88,
+    "end": 50
+  },
+  {
+    "text": "an",
+    "start": 50,
+    "end": 50.14
+  },
+  {
+    "text": "invalid",
+    "start": 50.14,
+    "end": 50.44
+  },
+  {
+    "text": "debit.",
+    "start": 50.5,
+    "end": 51.17
+  },
+  {
+    "text": "But",
+    "start": 51.17,
+    "end": 51.55
+  },
+  {
+    "text": "not",
+    "start": 51.55,
+    "end": 51.68
+  },
+  {
+    "text": "everything",
+    "start": 51.68,
+    "end": 52.46
+  },
+  {
+    "text": "cracked.",
+    "start": 52.47,
+    "end": 53.3
+  },
+  {
+    "text": "Cross",
+    "start": 53.3,
+    "end": 53.6
+  },
+  {
+    "text": "tenant",
+    "start": 53.6,
+    "end": 53.94
+  },
+  {
+    "text": "isolation,",
+    "start": 53.95,
+    "end": 54.51
+  },
+  {
+    "text": "session",
+    "start": 54.77,
+    "end": 54.97
+  },
+  {
+    "text": "token",
+    "start": 55.08,
+    "end": 55.34
+  },
+  {
+    "text": "forgery,",
+    "start": 55.34,
+    "end": 55.87
+  },
+  {
+    "text": "and",
+    "start": 55.87,
+    "end": 56.06
+  },
+  {
+    "text": "the",
+    "start": 56.06,
+    "end": 56.24
+  },
+  {
+    "text": "quote",
+    "start": 56.26,
+    "end": 56.54
+  },
+  {
+    "text": "account",
+    "start": 56.54,
+    "end": 56.96
+  },
+  {
+    "text": "are",
+    "start": 56.96,
+    "end": 57.14
+  },
+  {
+    "text": "all",
+    "start": 57.14,
+    "end": 57.32
+  },
+  {
+    "text": "held",
+    "start": 57.32,
+    "end": 57.52
+  },
+  {
+    "text": "firm",
+    "start": 57.58,
+    "end": 57.8
+  },
+  {
+    "text": "under",
+    "start": 57.8,
+    "end": 58.09
+  },
+  {
+    "text": "pressure.",
+    "start": 58.09,
+    "end": 58.78
+  },
+  {
+    "text": "76",
+    "start": 59.12,
+    "end": 59.22
+  },
+  {
+    "text": "tests,",
+    "start": 59.22,
+    "end": 59.71
+  },
+  {
+    "text": "eight",
+    "start": 59.71,
+    "end": 60.06
+  },
+  {
+    "text": "findings,",
+    "start": 60.06,
+    "end": 60.77
+  },
+  {
+    "text": "and",
+    "start": 60.77,
+    "end": 60.98
+  },
+  {
+    "text": "one",
+    "start": 60.98,
+    "end": 61.19
+  },
+  {
+    "text": "clear",
+    "start": 61.19,
+    "end": 61.53
+  },
+  {
+    "text": "picture",
+    "start": 61.53,
+    "end": 61.98
+  },
+  {
+    "text": "of",
+    "start": 62.03,
+    "end": 62.08
+  },
+  {
+    "text": "exactly",
+    "start": 62.37,
+    "end": 62.57
+  },
+  {
+    "text": "where",
+    "start": 62.68,
+    "end": 63.03
+  },
+  {
+    "text": "this",
+    "start": 63.03,
+    "end": 63.31
+  },
+  {
+    "text": "platform",
+    "start": 63.31,
+    "end": 63.88
+  },
+  {
+    "text": "stands.",
+    "start": 63.88,
+    "end": 64.6
+  }
+]

@@ -1,0 +1,40 @@
+# Copy to qa.properties (gitignored) and fill in. Never commit real credentials.
+# Every value here can also be overridden with -Dkey=value on the mvn command line,
+# or an env var of the same name uppercased with dots -> underscores (e.g. QA_BASE_URL).
+
+# --- Target ---
+qa.base.url=https://invoices.coresrp.com
+qa.env.label=live-free-trial
+
+# --- Auth (do not hardcode in source; env vars / local qa.properties only) ---
+qa.login.email=
+qa.login.password=
+
+# --- Tenant under test (the isolated trial org/company, safe to load-test) ---
+# akf00's organization / Adam Internship QA, captured 2026-08-04 via live inspection.
+qa.org.id=019fcc2d-0a4f-74a3-99e7-ab78e2ead53a
+qa.company.id=019fcc2d-ba46-74d0-9909-eb849fa481df
+qa.company.name=Adam Internship QA
+# Second company, created 2026-08-04 specifically for cross-company leakage testing (CompanySwitchTest).
+qa.company.id.b=019fcc67-0b4b-74a1-9c23-6329ee8c6cee
+qa.company.name.b=QA Leakage Test Co
+# Real, already-created "failed" test invoice — safe to freely mutate for boundary/amount/date tests.
+qa.test.invoice.id=019fcc4f-7296-7b02-a24f-e71f4de73464
+
+# --- Playwright ---
+qa.headless=true
+qa.slowmo.ms=0
+qa.screenshot.on.failure=true
+qa.default.timeout.ms=15000
+
+# --- JMeter load tests ---
+qa.load.threads=5
+qa.load.rampup.seconds=10
+qa.load.duration.seconds=60
+qa.load.spike.threads=50
+qa.load.spike.rampup.seconds=2
+qa.load.soak.threads=10
+qa.load.soak.duration.minutes=30
+
+# --- Reporting ---
+qa.reports.dir=reports

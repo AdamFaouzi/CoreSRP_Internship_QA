@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.coresrp.qa</groupId>
+  <artifactId>core-invoice-qa</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Core Invoice Adversarial QA</name>
+  <description>Solo adversarial QA suite (Playwright UI + JMeter DSL load) for Core Invoice, plus a unified report aggregator.</description>
+
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <playwright.version>1.61.0</playwright.version>
+    <selenium.version>4.46.0</selenium.version>
+    <junit.version>5.11.0</junit.version>
+    <jmeter-dsl.version>2.2</jmeter-dsl.version>
+    <jackson.version>2.17.2</jackson.version>
+    <jsoup.version>1.17.2</jsoup.version>
+    <slf4j.version>2.0.13</slf4j.version>
+  </properties>
+
+  <dependencies>
+    <!-- Playwright UI testing -->
+    <dependency>
+      <groupId>com.microsoft.playwright</groupId>
+      <artifactId>playwright</artifactId>
+      <version>${playwright.version}</version>
+    </dependency>
+
+    <!-- Selenium UI testing — a small representative suite alongside the primary Playwright one,
+         same POM structure. Selenium 4.6+ ships Selenium Manager, which auto-resolves/downloads
+         the matching browser driver, so no separate WebDriverManager dependency is needed. -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit 5 -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- JMeter Java DSL (load/stress testing, no .jmx/GUI) -->
+    <dependency>
+      <groupId>us.abstracta.jmeter</groupId>
+      <artifactId>jmeter-java-dsl</artifactId>
+      <version>${jmeter-dsl.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>us.abstracta.jmeter</groupId>
+      <artifactId>jmeter-java-dsl-dashboard</artifactId>
+      <version>${jmeter-dsl.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- JSON handling: export validation, config, report data model -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <!-- Pinned explicitly: jmeter-java-dsl transitively pulls an older jackson-core (2.14.2)
+         that Maven's nearest-wins mediation prefers over the 2.17.x jackson-databind needs,
+         causing a NoSuchMethodError at runtime. A direct declaration always wins mediation. -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!-- CSV/Excel export content verification -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-csv</artifactId>
+      <version>1.11.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>5.3.0</version>
+    </dependency>
+    <!-- Pinned explicitly: jmeter-java-dsl transitively pulls commons-io 2.15.1, which Maven's
+         nearest-wins mediation prefers, but POI 5.3.0 needs 2.16+ (BoundedInputStream.builder()),
+         causing a NoSuchMethodError when parsing .xlsx. Same class of conflict as jackson-core above. -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.18.0</version>
+    </dependency>
+
+    <!-- Lightweight HTML templating for the unified report -->
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>${jsoup.version}</version>
+    </dependency>
+
+    <!-- Logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>core-invoice-qa</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+
+      <!-- Default `mvn test`: only UI (Playwright) tests. Load tests are opt-in (see load-tests profile). -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+          <includes>
+            <include>**/ui/tests/**/*Test.java</include>
+          </includes>
+          <systemPropertyVariables>
+            <qa.env>${qa.env}</qa.env>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.4.0</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <!-- mvn test -Pselenium-tests : run the representative Selenium suite (separate from the primary Playwright suite) -->
+    <profile>
+      <id>selenium-tests</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <includes>
+                <include>**/selenium/tests/**/*Test.java</include>
+              </includes>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- mvn test -Pload-tests : run JMeter DSL scenarios (these hit the live app with real load, run deliberately) -->
+    <profile>
+      <id>load-tests</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <includes>
+                <include>**/load/scenarios/**/*Test.java</include>
+              </includes>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Build the unified HTML report after both suites ran. Invoke with the fully-qualified
+         plugin coordinate (see README) — `mvn -Preport exec:java@...` fails because Maven's
+         command-line prefix resolution for "exec" hard-stops at org.apache.maven.plugins
+         (which has no exec-maven-plugin) instead of falling through to org.codehaus.mojo. -->
+    <profile>
+      <id>report</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>aggregate-report</id>
+                <goals><goal>java</goal></goals>
+                <configuration>
+                  <mainClass>com.coresrp.qa.report.ReportMain</mainClass>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

@@ -1,0 +1,15 @@
+{
+  "name": "Core Invoice",
+  "kicker": "Adversarial QA & Security Assessment",
+  "subtitle": "Automated test suite · Adam Faouzi",
+  "colors": {
+    "ink": "#0A0E1A",
+    "accent": "#C9A227",
+    "accent_light": "#E8CE7A",
+    "paper": "#EEF0F5"
+  },
+  "fonts": {
+    "display": "Georgia, \"Times New Roman\", serif",
+    "sans": "\"Helvetica Neue\", Helvetica, Arial, sans-serif"
+  }
+}
